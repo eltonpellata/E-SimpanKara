@@ -1,0 +1,40 @@
+<?php
+// Termasuk file koneksi
+include '../koneksi.php';
+
+// Ambil data dari form
+$no_surat = $_POST['no_surat'];
+$jdl_surat = $_POST['jdl_surat'];
+$surat_dari = $_POST['surat_dari'];
+$tgl_upload = $_POST['tgl_upload'];
+$perihal = $_POST['perihal'];
+
+// Proses unggah file
+$upload_directory = "uploads/"; // Direktori tempat menyimpan file, pastikan direktori ini ada dan dapat diakses
+
+$file_surat = $_FILES['file_surat'];
+$nama_file = $file_surat['name'];
+$nama_file_tmp = $file_surat['tmp_name'];
+$path = $upload_directory . $nama_file;
+
+// Pindahkan file ke direktori tujuan
+if (move_uploaded_file($nama_file_tmp, $path)) {
+    // File berhasil diunggah, simpan informasi ke database
+    $query = "INSERT INTO tb_simpan (no_surat, jdl_surat, surat_dari, tgl_upload, perilah, file_surat) 
+              VALUES ('$no_surat', '$jdl_surat', '$surat_dari', '$tgl_upload', '$perihal', '$nama_file')";
+
+    if ($conn->query($query) === TRUE) {
+        header("Location: ../admin/tabel.php?pesan=Data berhasil ditambahkan");
+        exit();
+    } else {
+        header("Location: ../admin/tabel.php?pesan=Gagal menambahkan data: " . $conn->error);
+        exit();
+    }
+} else {
+    // Jika gagal mengunggah file
+    header("Location: ../admin/tabel.php.php?pesan=Maaf, terjadi kesalahan saat mengunggah file.");
+    exit();
+}
+
+// Tutup koneksi
+$conn->close();
