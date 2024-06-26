@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 26, 2024 at 04:29 AM
+-- Generation Time: Jun 26, 2024 at 10:15 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -35,7 +35,14 @@ CREATE TABLE `tb_simpan` (
   `tgl_upload` date NOT NULL,
   `perilah` text NOT NULL,
   `file_surat` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_simpan`
+--
+
+INSERT INTO `tb_simpan` (`id`, `no_surat`, `jdl_surat`, `surat_dari`, `tgl_upload`, `perilah`, `file_surat`) VALUES
+(13, '71-K/PM.III-18/AD/VI/2024', 'Petikan Putusan dan BHT', 'surat dari istansi', '2024-06-26', 'perihal yang sanagat bagus', 'COBA DATA PDF.pdf');
 
 -- --------------------------------------------------------
 
@@ -48,18 +55,14 @@ CREATE TABLE `tb_user` (
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_user`
 --
 
 INSERT INTO `tb_user` (`id`, `username`, `email`, `password`) VALUES
-(7, 'admin', 'admin@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'),
-(9, 'gill', 'gill@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'),
-(16, 'elton', 'elton@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'),
-(18, 'elton', 'elton@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'),
-(19, 'angki', 'elton@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5');
+(20, 'admin', 'admin@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5');
 
 --
 -- Indexes for dumped tables
@@ -85,13 +88,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_simpan`
 --
 ALTER TABLE `tb_simpan`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

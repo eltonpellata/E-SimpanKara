@@ -8,8 +8,6 @@ include 'header.php';
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h2 class="sitename"><i>e-SimpanKara</i></h2><span>.</span>
       </a>
 
@@ -26,9 +24,7 @@ include 'header.php';
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="login/login.php">Login Admin</a>
-
+      <a class="btn-getstarted" href="/login/login.php">Login Admin</a>
     </div>
   </header>
 
@@ -37,11 +33,11 @@ include 'header.php';
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <img src="assets/img/bg-lg.jpg" alt="" data-aos="fade-in">
+      <img src="<?= $base_url; ?>/assets/img/bg-lg.jpg" alt="" data-aos="fade-in">
 
       <div class="container">
-        <img data-aos="fade-up" data-aos-delay="900" src="assets/img/Logo-1.png" alt="" style="width: 100px; height: 100px; margin-top: -10px; margin-left: 100px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
-        <img data-aos="fade-up" data-aos-delay="900" src="assets/img/Logo-2.png" alt="" style="width: 100px; height: 100px; margin-top: -10px; margin-left: 1130px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+        <img data-aos="fade-up" data-aos-delay="900" src="<?= $base_url; ?>/assets/img/Logo-1.png" alt="" style="width: 100px; height: 100px; margin-top: -10px; margin-left: 100px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+        <img data-aos="fade-up" data-aos-delay="900" src="<?= $base_url; ?>/assets/img/Logo-2.png" alt="" style="width: 100px; height: 100px; margin-top: -10px; margin-left: 1130px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
         <div class="row">
           <div class="text-center ">
             <h2 data-aos="fade-up" class="fs-1" data-aos-delay="800" style=" text-shadow: 2px 2px 4px #000000;">Selamat Datang Di Sistem <i style="color:aqua;">e-SimpanKara</i></h2>
@@ -50,12 +46,6 @@ include 'header.php';
                 <h4 data-aos="fade-up" data-aos-delay="900">Dapatkan informasi terbaru seputar kegiatan dan program di sini. Kami selalu berusaha untuk memberikan update terkini bagi masyarakat.</h4>
               </strong></p>
           </div>
-          <!-- <div class="text-center">
-            <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-              <input type="text" class="form-control" placeholder="Contoh Pencarian Nomor Surat dan Nama Surat">
-              <input type="submit" class="btn btn-primary" value="Sign up">
-            </form>
-          </div> -->
         </div>
       </div>
 
@@ -133,30 +123,19 @@ include 'header.php';
               </tbody>
             </table>
           </div>
-
-
         </div>
       </div>
-
     </section><!-- /About Section -->
-
-
-
     <!-- Features Section -->
     <section id="features" class="features section">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
-
       <div class="container">
-
-
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/1.jpg" class="img-fluid" alt="">
+            <img src="<?= $base_url; ?>/assets/img/1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 d-flex justify-content-right flex-column" data-aos="fade-up">
             <strong>
@@ -171,27 +150,20 @@ include 'header.php';
             <!-- <a href="#" class="btn btn-get-started align-self-start">Get Started</a> -->
           </div>
         </div><!-- Features Item -->
-
       </div>
-
     </section><!-- /Features Section -->
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Visi dan Misi</h2>
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
-
       <div class="container text-center">
-
         <h3>Visi</h3>
         <p>
           <li>Menjadi lembaga yang profesional, transparan, dan akuntabel dalam penegakan hukum dan keadilan di lingkungan militer.</li>
         </p>
-
         <h3>Misi</h3>
         <li>Melaksanakan penuntutan dan penyidikan dalam perkara pidana yang Tersangkanya termasuk wewenang Pengadilan Militer (Dilmil);</li>
         <li>Memberikan pendapat hukum kepada Perwira Penyerah Perkara (Papera) dalam penyelesaian perkara;</li>
@@ -201,33 +173,22 @@ include 'header.php';
         <li>Menyelenggarakan pembinaan, pengendalian, dan pengawasan teknis yustisial terhadap tugas Otmil di daerah hukumnya;</li>
         <li>Melaksanakan pengolahan dan penyelesaian perkara khusus; dan</li>
         <li>Melaksanakan kebijakan Badan Pembinaan Hukum (Babinkum) TNI mengenai pembinaan penyelenggaraan Oditurat.</li>
-
       </div>
-
     </section><!-- /Portfolio Section -->
-
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Struktur Organisasi</h2>
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
-
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-
-        <img src="assets/img/struktur.jpg" width="100%" alt="">
-
+        <img src="<?= $base_url; ?>/assets/img/struktur.jpg" width="100%" alt="">
       </div>
-
     </section><!-- /Pricing Section -->
-
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
-
-      <img src="assets/img/bg-lg.jpg" alt="" style="box-shadow: 2px 2px 5px black;">
-
+      <img src="<?= $base_url; ?>/assets/img/bg-lg.jpg" alt="" style="box-shadow: 2px 2px 5px black;">
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-10">
@@ -239,9 +200,9 @@ include 'header.php';
           </div>
         </div>
       </div>
-
     </section><!-- /Call To Action Section -->
+  </main>
 
-    <?php
-    include 'footer.php';
-    ?>
+  <?php
+  include 'footer.php';
+  ?>
